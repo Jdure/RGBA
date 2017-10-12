@@ -1,8 +1,8 @@
 package model;
 
-import java.util.Observable;
-
 import android.graphics.Color;
+
+import java.util.Observable;
 
 /**
  * The model holds the data.
@@ -104,7 +104,9 @@ public class RGBAModel extends Observable {
         this.green = green;
         this.blue  = blue;
 
+
         this.updateObservers();
+
     }
 
     // the model has changed!
@@ -112,6 +114,7 @@ public class RGBAModel extends Observable {
     private void updateObservers() {
         this.setChanged();
         this.notifyObservers();
+        //these two methods come from the Observable class
     }
 
     @Override
